@@ -1,0 +1,51 @@
+---
+title: 写作入门
+description: 第一篇文章，讲解如何在这套模板里写一篇新文章。
+sidebar:
+  # 数字越小越靠上。autogenerate 分组按这个排序。
+  order: 1
+---
+
+# 写作入门
+
+欢迎！这篇文章演示**怎么写一篇文章**。
+
+## 一篇文章就是一个文件
+
+1. 在 `src/content/docs/` 下新建一个 `.md`（或 `.mdx`）文件
+2. 文件顶部写一段 frontmatter（两个 `---` 之间）
+3. 下面写 Markdown 正文
+
+## frontmatter 是什么
+
+文件顶部这一段 YAML：
+
+```yaml
+---
+title: 文章标题
+description: 一句话描述，会显示在搜索结果和 SEO 里
+sidebar:
+  order: 1   # 侧边栏里的排序，数字越小越靠上
+---
+```
+
+## 标题层级
+
+文章正文里用 `##`、`###` 做小标题。Starlight 会自动用它们生成**右侧目录**。
+
+## 代码块
+
+用三个反引号包裹，自动高亮 + 显示复制按钮：
+
+```js
+console.log('Hello, world!');
+```
+
+```python
+def hello():
+    print("Hello, world!")
+```
+
+## 下一篇
+
+写完这篇，去看 [第二篇：怎么组织一个教程](/getting-started/organize/).

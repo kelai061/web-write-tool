@@ -1,0 +1,46 @@
+---
+title: 首页
+description: 这是你网站的首页。写在这里的内容会显示在首页正中间。
+template: splash
+hero:
+  tagline: 用一句话介绍你的网站是干什么的。
+  actions:
+    - text: 开始阅读
+      link: /getting-started/intro/
+      icon: right-arrow
+      variant: primary
+    - text: 查看教程
+      link: /guide/lesson-1/
+      icon: right-arrow
+---
+
+## 这里是什么
+
+这一段是首页正文。删掉它，换成你自己的开场白即可。
+
+## 用 Markdown 写文章
+
+直接写 Markdown 就行：**加粗**、*斜体*、`行内代码`、[链接](https://astro.build)。
+
+- 列表项一
+- 列表项二
+- 列表项三
+
+## 首页卡片示例
+
+import { CardGrid, Card } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="入门" icon="seti:default" href="/getting-started/intro/">
+    从零开始的第一篇
+  </Card>
+  <Card title="进阶教程" icon="seti:default" href="/guide/lesson-1/">
+    系统化的多章节教程
+  </Card>
+  <Card title="关于本站" icon="seti:default" href="/about/">
+    关于这个项目
+  </Card>
+</CardGrid>
+
+> 想换图标？Starlight 内置几十个，见
+> https://starlight.astro.build/zh-cn/guides/components/#icons
