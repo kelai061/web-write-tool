@@ -11,7 +11,7 @@ import starlight from '@astrojs/starlight';
 // ============================================================
 export default defineConfig({
   // 部署上线前改成你的正式域名（影响 sitemap、canonical 链接）
-  site: 'https://example.com',
+  site: 'https://web-write-tool.pages.dev',
 
   integrations: [
     starlight({
