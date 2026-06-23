@@ -16,30 +16,43 @@ hero:
       icon: right-arrow
 ---
 
-import { CardGrid, Card } from '@astrojs/starlight/components';
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## 课设项目合集
+## 课设项目归档
 
-<CardGrid stagger>
-  <Card title="基础课设 · GenshinRPG" icon="seti:java" href="/ke-she/01-基础课设-genshinrpg/基础课设项目/">
-    Java Swing + MySQL 架构的角色扮演游戏（RPG）。包含从数据库初始化、核心业务逻辑开发，到基于 AI 进行大规模代码结构重构与分析、多平台独立运行包打包装配的完整工程实践路径。
-  </Card>
-  <Card title="代码学习工具 · Supplement" icon="seti:rust" href="/ke-she/02-代码学习工具-supplement/代码学习工具项目/">
-    基于逆向拆解学习理念的代码刷题与辅助工具。专为移动端（手机与平板）适配优化，支持自动获取和同步 Gradle 配置，集成多轮 Bug 修复日志与系统状态栏遮挡等常见移动端 UI 兼容性适配问题的解决方案。
-  </Card>
-  <Card title="课设展示网站" icon="seti:astro" href="/ke-she/03-课设展示网站/课设展示网站项目/">
-    用于集中展示和归档课设作品集的文档展示网站。基于高性能 Astro 静态站点引擎与 Starlight 文档主题进行深度定制开发与优化，打通 Cloudflare Pages 自动化编译与持续集成托管发布全路径。
-  </Card>
-  <Card title="格式 Skill 制作" icon="seti:document" href="/ke-she/04-格式skill制作/格式skill制作/">
-    通过大语言模型自动生成符合学术与工程规范 Word 报告的格式化 AI 工具。内置基于 Node 与 Puppeteer 的代码美化截图工具，支持在 Windows 机器上实现一键化排版、公式图表生成及 PDF 导出校验。
-  </Card>
+<CardGrid>
+  <LinkCard
+    title="基础课设 · GenshinRPG"
+    description="模块化重构的 Java Swing 桌面游戏。内置轻量数据库，提供一键运行的绿色分发包。"
+    href="/ke-she/01-基础课设-genshinrpg/基础课设项目/"
+    icon="laptop"
+  />
+  <LinkCard
+    title="代码学习工具 · Supplement"
+    description="代码刷题与辅助工具。解决移动端状态栏遮挡与跨平台打包连接等复杂适配问题。"
+    href="/ke-she/02-代码学习工具-supplement/代码学习工具项目/"
+    icon="open-book"
+  />
+  <LinkCard
+    title="课设展示网站"
+    description="本站设计与上线归档。利用 Astro 静态引擎与 Cloudflare Pages 构建自动化编译与发布流。"
+    href="/ke-she/03-课设展示网站/课设展示网站项目/"
+    icon="rocket"
+  />
+  <LinkCard
+    title="格式 Skill 制作"
+    description="报告排版 AI 助手。内置 Puppeteer 与 Carbon 本地服务，自动装配并输出规范 Docx 报告。"
+    href="/ke-she/04-格式skill制作/格式skill制作/"
+    icon="setting"
+  />
 </CardGrid>
 
-## 关于这个站
+## 关于本站
 
-这里记录了利用 **AI 辅助**完成的几个典型课程设计项目 —— 从 Java 桌面游戏、跨平台代码学习工具，到这个展示站本身，再到自动生成报告格式的 Skill 工具。
+本站是一个专门用于归档和复盘课程设计项目的技术档案馆。主要呈现各个课设项目从原始需求、AI 协作重构、兼容性适配到最终打包发布的全工程路径。
 
-每个项目均附有完整的**重构计划、大模型提示词与详细工作日志**，实现了软件生命周期中从需求到发布的精细复盘与留档。
+每个项目均包含了核心设计思路、关键阶段计划、大模型提示词以及详细的工作日志，为软件全生命周期的复盘和质量管理提供实践参考。
 
 > 站点使用 [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) 构建，托管于 [Cloudflare Pages](https://pages.cloudflare.com)。
+
 

@@ -16,6 +16,6 @@ title: "课程设计整理与展示"
 
 ## 说明
 
-- 所有的文章内图片统一存放于 **[assets](./assets/)** 文件夹中。
+- 所有的文章内图片统一存放于 `assets/` 文件夹中。
 - 所有的脑力缓存日志（Gemini Brain Logs）和被引用文件已转存为相对路径，可在此直接查看。
 - 部署上线地址：[https://www.klee.cyou](https://www.klee.cyou) / [https://web-write-tool.pages.dev](https://web-write-tool.pages.dev)
