@@ -60,6 +60,12 @@ export default defineConfig({
           autogenerate: { directory: 'guide' },
         },
 
+        // —— 分组 2.5：课设项目 ——
+        {
+          label: '课设项目',
+          autogenerate: { directory: 'ke-she' },
+        },
+
         // —— 分组 3：手动指定的示例（想精确控制顺序时用这种）——
         {
           label: '其它',
