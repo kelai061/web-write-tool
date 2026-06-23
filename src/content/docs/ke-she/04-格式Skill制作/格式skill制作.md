@@ -46,12 +46,12 @@ ok
 现在写一个计划，因为你的 Token 消耗太快，所以我打算让其他 AI 代为你来执行。你现在要做的是详细写下你的进度，用 Markdown 写，然后再写下你的计划，尽可能详细地描述一下，以及验收的一个目标。
 ```
 
-[HANDOFF.md](./引用文件/HANDOFF.md)
+[HANDOFF.md](/ke-she/04-格式skill制作/引用文件/handoff/)
 
-[skill初版计划（Gemini）](./引用文件/gemini日志/skill初版-计划.md)
+[skill初版计划（Gemini）](/ke-she/04-格式skill制作/引用文件/gemini日志/skill初版-计划/)
 
 工作汇报：
-[skill初版工作日志（Gemini）](./引用文件/gemini日志/skill初版-工作日志.md)
+[skill初版工作日志（Gemini）](/ke-she/04-格式skill制作/引用文件/gemini日志/skill初版-工作日志/)
 
 ##### 使用教程
 该 Skill 已经完全集成在你的智能体助手里了。以下是**针对不同场景的使用方法**：
@@ -116,7 +116,7 @@ C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe scripts/build_
 
 ## 继续修复
 修复文档
-[REVIEW.md](./引用文件/REVIEW.md)
+[REVIEW.md](/ke-she/04-格式skill制作/引用文件/review/)
 ```
 输出一个样板文件我看看
 ```
@@ -179,7 +179,7 @@ ok？先做这个，写好更新的markdown文档写到这里
 E:\AI\zcode\object\skills\course-design-report\AI-debug
 ```
 出乎意料的AI输出了这个
-[VERIFICATION.md](./引用文件/VERIFICATION.md)
+[VERIFICATION.md](/ke-she/04-格式skill制作/引用文件/verification/)
 ```
 carbon模块在哪？
 ```
@@ -229,13 +229,13 @@ Carbon 并不是一个像 GCC 或 Pandoc 那样可以直接在命令行后台输
 ```
 看似AI整理了，但是当阅读skill的时候明显发现了不对的地方，AI并没有改，AI在这里偷懒了
 ```
-[SKILL.md](./引用文件/SKILL.md)  
+[SKILL.md](/ke-she/04-格式skill制作/引用文件/skill/)  
 这里你没有改呀，不要偷懒，再阅读一遍项目
 ```
 
 ## 正式测试课设：新的AI窗口
 ```
-[SKILL.md](./引用文件/SKILL.md)  
+[SKILL.md](/ke-she/04-格式skill制作/引用文件/skill/)  
 这是你的skill  
 我提供的信息是：  
 "C:\Users\kelai\Downloads\课程设计格式2026---罗菁2026.6.12.doc"
@@ -252,7 +252,7 @@ E:\AI\zcode\object\ke-she\dist\GenshinRPG
 源码在这里，以及我给你提供的md里面就是负责的源码部分，不是全部！！！！
 ```
 AI对这个项目列出的计划
-[课设正式测试计划（Gemini）](./引用文件/gemini日志/课设正式测试-计划.md)
+[课设正式测试计划（Gemini）](/ke-she/04-格式skill制作/引用文件/gemini日志/课设正式测试-计划/)
 阅读计划之后发现AI还是改了输入的信息，上下文还是影响到了AI，针对此做出紧急修复
 ```
 停！！！源码部分就是这里的"C:\Users\kelai\Downloads\代码部分.md"
@@ -263,7 +263,7 @@ AI对这个项目列出的计划
 批量处理第二份的课设
 ```
 "
-[SKILL.md](./引用文件/SKILL.md)  
+[SKILL.md](/ke-she/04-格式skill制作/引用文件/skill/)  
 这是你的skill  
 我提供的信息是：  
 E:\AI\zcode\object\skills\课设1.md"名字是王鑫豪，202508064102  
