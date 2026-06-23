@@ -1,6 +1,17 @@
 ---
-title: "格式Skill制作"
+title: "课程设计格式 Skill 制作"
 ---
+
+> 整理说明：此文件是在副本目录中整理的版本，尽量保留原话，只补充标题、分段和链接指向。
+
+## 文档定位
+
+- 内容类型：Skill 设计与排错记录
+- 关注重点：课程设计报告 Skill、Carbon 代码截图、文档模板、环境隔离和正式测试过程。
+- 相关附件与外部链接：见 [链接整理/链接索引.md](/ke-she/assets/链接索引/)
+- 原始备份：见 [原始备份_课设内容大分级/格式skill制作.md](/ke-she/04-格式skill制作/原始备份_课设内容大分级/格式skill制作/)
+
+## 正文记录
 
 ```md
 这是一个 Skill 的文件夹，你要做的是制作 skill 工具，并且是新建文件夹，然后保存在里面
@@ -10,7 +21,7 @@ title: "格式Skill制作"
 提取格式特点，并重新制定一份模板文件
 其中里面的代码换成这个项目的一个截图
 配置：没有背景边框，mac，水印kelai，白色
-项目地址：E:\AI\antigravity\stady-code\supplement\carbon
+项目地址：E:\AI\antigravity\stady-code\Supplement\carbon
 
 这个 skill 的功能就是输入一大堆信息，让 AI 进行分析，并根据指定格式把相关内容写进新文档，重新输出一份文档出来。
 
@@ -19,7 +30,9 @@ title: "格式Skill制作"
 
 你对这个Skill还有什么疑问吗？我们可以探讨一下
 ```
+
 补充的md
+
 ```
 还是 Skill 每次运行时，把用户材料里的代码实时渲染成 Carbon 风格截图再插入
 哦，对了，这里我补充一点，代码不用一次性弄太多，还是分开来弄，啊，这里需要让AI来指导一下哪些应该转换成图片然后贴进去，并且即使是AI也不能一次放太多的，比如不超过30个行吧，因为太长的话，嗯观感不怎么好
@@ -39,21 +52,23 @@ ok
 ```
 
 制作图片：
-![ZCode 界面](../assets/ZCode_223606.png)
+![ZCode.exe_20260622_223606](../assets/ZCode.exe_20260622_223606.png)
 
 由于进度太慢并且服务器持续性的卡顿；让AI执行换AI的策略
+
 ```
 现在写一个计划，因为你的 Token 消耗太快，所以我打算让其他 AI 代为你来执行。你现在要做的是详细写下你的进度，用 Markdown 写，然后再写下你的计划，尽可能详细地描述一下，以及验收的一个目标。
 ```
 
-[HANDOFF.md](/ke-she/04-格式skill制作/引用文件/handoff/)
+"E:\AI\zcode\object\skills\course-design-report\HANDOFF.md"
 
-[skill初版计划（Gemini）](/ke-she/04-格式skill制作/引用文件/gemini日志/skill初版-计划/)
+file:///c%3A/Users/kelai/.gemini/antigravity/brain/9a478ec7-c757-4128-8a2b-02e446173974/implementation_plan.md
 
 工作汇报：
-[skill初版工作日志（Gemini）](/ke-she/04-格式skill制作/引用文件/gemini日志/skill初版-工作日志/)
+file:///c%3A/Users/kelai/.gemini/antigravity/brain/9a478ec7-c757-4128-8a2b-02e446173974/walkthrough.md
 
 ##### 使用教程
+
 该 Skill 已经完全集成在你的智能体助手里了。以下是**针对不同场景的使用方法**：
 
 ### 1. 场景一：直接在对话中让我帮你整理（推荐）
@@ -63,15 +78,16 @@ ok
 **步骤**：
 
 1. **发送你的个人信息和课设草稿**，例如：
-    
-    > "帮我把这些整理成课设报告。我是软件 2201 班的张三，学号 202208080101。下面是我的课设草案和代码：……[粘贴你的草稿、类设计说明、核心 Java 代码等]……"
-    
+   
+   > "帮我把这些整理成课设报告。我是软件 2201 班的张三，学号 202208080101。下面是我的课设草案和代码：……[粘贴你的草稿、类设计说明、核心 Java 代码等]……"
+
 2. **AI 会自动处理**：
-    - 自动检测并提取班级、学号、姓名等封面字段。
-    - 自动分析你发来的代码段，将其通过本地 Carbon 服务渲染为精美的代码截图。
-    - 自动按照中原工学院的规范骨架，将你的文字归入对应章节（绝不修改或润色你的原文）。
-    - 自动装配并输出一份格式完全对齐的 `.docx` 报告文件，并告诉你保存的绝对路径。
-    - 告诉你需要手动补充的图（例如系统类图、运行截图），等你把图片发给我后，我可以自动帮你塞进文档。
+   
+   - 自动检测并提取班级、学号、姓名等封面字段。
+   - 自动分析你发来的代码段，将其通过本地 Carbon 服务渲染为精美的代码截图。
+   - 自动按照中原工学院的规范骨架，将你的文字归入对应章节（绝不修改或润色你的原文）。
+   - 自动装配并输出一份格式完全对齐的 `.docx` 报告文件，并告诉你保存的绝对路径。
+   - 告诉你需要手动补充的图（例如系统类图、运行截图），等你把图片发给我后，我可以自动帮你塞进文档。
 
 ---
 
@@ -87,7 +103,7 @@ powershell
 
 # 在 carbon 目录下运行开发服务器
 
-cd E:\AI\antigravity\stady-code\supplement\carbon
+cd E:\AI\antigravity\stady-code\Supplement\carbon
 
 npx yarn dev
 
@@ -113,20 +129,24 @@ powershell
 
 C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe scripts/build_docx.py --content <你的content.json路径> --template assets/template.docx --out E:\AI\zcode\object\skills\course-design-report\我的课程设计报告.docx
 
-
 ## 继续修复
+
 修复文档
-[REVIEW.md](/ke-she/04-格式skill制作/引用文件/review/)
+"E:\AI\zcode\object\skills\course-design-report\REVIEW.md"
+
 ```
 输出一个样板文件我看看
 ```
-![局部截取_012654](../assets/局部截取_012654.png)
+
+![局部截取_20260623_012654](../assets/局部截取_20260623_012654.png)
 AI的图片插入样板非常的糟糕，可能是模块接入的异常情况，亦或者是我表达的不清晰导致的
 
 ## 第3轮依然没有修复掉这个bug
+
 ```
 这不对的啊，你看不出区别吗？你跟我说说你是怎么做到这个图片的，我看看哪里的问题
 ```
+
 ```
 不要这上面那里的信息  
 另外的我要说明，你的做法不是根据脚本来合成一个大图然后截图的  
@@ -136,15 +156,16 @@ AI的图片插入样板非常的糟糕，可能是模块接入的异常情况，
 最后的效果依旧很差
 
 针对AI的谜之幻觉
+
 ```
 你先生成这个代码的图片我看看  
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
-  
+
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 
-  
+
 
 const unfold = (f, seed) => {
 
@@ -161,29 +182,38 @@ return go(f, seed, [])
 }  
 逐次检验一下
 ```
+
 ![test_user_code](../assets/test_user_code.png)
+
 ```
 修复，不要边框，在carbon设置里把这两个拉到最低：padding的vert和horiz
 ```
-![test_user_code_1](../assets/test_user_code_1.png)
+
+![test_user_code 1](../assets/test_user_code 1.png)
+
 ```
 是的非常好，这个图片非常好，现在更新一下skill，让所有的图片都保持这样的风格和设置，放在文档里的就是这个图片，你懂吗？
 然后课设重新输出一个样板出来
 ```
 
 课设依然是失败的,接下来我意识到应该是最开始的计划出现了问题，需要排查错误
+
 ```
 课设还是不对，完全的不对  
 把carbon生成图专门放到一个文件夹里作为一个模块化的文件，表示这个模块我验证了没有问题  
 ok？先做这个，写好更新的markdown文档写到这里  
 E:\AI\zcode\object\skills\course-design-report\AI-debug
 ```
+
 出乎意料的AI输出了这个
-[VERIFICATION.md](/ke-she/04-格式skill制作/引用文件/verification/)
+"E:\AI\zcode\object\skills\course-design-report\AI-debug\VERIFICATION.md"
+
 ```
 carbon模块在哪？
 ```
+
 此时我才发现，carbon在其他的文件夹项目里，并没有过来，并没有保持环境隔离
+
 ```
 保持环境隔离，复制过来  
 另外说明：这里的图片都是有问题的，并不是carbon的图片  
@@ -197,6 +227,7 @@ E:\AI\zcode\object\skills\course-design-report\scratch\extracted_media
 ```
 
 # carbon介绍
+
 ### 1. Carbon 本质是一个 Web 前端应用
 
 Carbon 并不是一个像 GCC 或 Pandoc 那样可以直接在命令行后台输出结果的二进制可执行程序。它是一个基于 React / Next.js 构建的网页应用。它的代码高亮、mac 窗口按钮装饰、代码行号排版等视觉效果，都是**由浏览器的 CSS 样式和 JS 引擎在网页加载时动态计算并渲染出来的**。
@@ -219,23 +250,30 @@ Carbon 并不是一个像 GCC 或 Pandoc 那样可以直接在命令行后台输
 这套“**本地启动 Next.js 服务 + Puppeteer 浏览器后台渲染截图**”的方案是目前**在本地 100% 还原 Carbon 官方高品质视觉效果的唯一标准方案**。它虽然需要“调取网页”，但全部在您的本地回环网络中进行，保持了完全的环境隔离与离线可用性。
 
 # 后接上文
+
 给AI一个主题的形式重新生成
+
 ```
 重新生成一个样板，代码自己生成，主题是java基础多态教学
 ```
+
 效果还可以
+
 ```
 好的，现在开始封装整个skill，不用的移动到AI-debug目录下，完善skill，并确保使用精简的文字
 ```
+
 看似AI整理了，但是当阅读skill的时候明显发现了不对的地方，AI并没有改，AI在这里偷懒了
+
 ```
-[SKILL.md](/ke-she/04-格式skill制作/引用文件/skill/)  
+"E:\AI\zcode\object\skills\course-design-report\SKILL.md"  
 这里你没有改呀，不要偷懒，再阅读一遍项目
 ```
 
 ## 正式测试课设：新的AI窗口
+
 ```
-[SKILL.md](/ke-she/04-格式skill制作/引用文件/skill/)  
+"E:\AI\zcode\object\skills\course-design-report\SKILL.md"  
 这是你的skill  
 我提供的信息是：  
 "C:\Users\kelai\Downloads\课程设计格式2026---罗菁2026.6.12.doc"
@@ -243,39 +281,48 @@ Carbon 并不是一个像 GCC 或 Pandoc 那样可以直接在命令行后台输
 "C:\Users\kelai\Downloads\代码部分.md"  
 输出  
 C:\Users\kelai\Downloads\输出课设  
-  
+
 欧昌斌，202508064103
 ```
+
 AI在运行中途突然开始寻找起了源码，我很震惊，然后向AI提供了源码位置
+
 ```
 E:\AI\zcode\object\ke-she\dist\GenshinRPG
 源码在这里，以及我给你提供的md里面就是负责的源码部分，不是全部！！！！
 ```
+
 AI对这个项目列出的计划
-[课设正式测试计划（Gemini）](/ke-she/04-格式skill制作/引用文件/gemini日志/课设正式测试-计划/)
+file:///c%3A/Users/kelai/.gemini/antigravity/brain/9f463b45-4b63-4f1e-b56e-129ced66b06c/implementation_plan.md
 阅读计划之后发现AI还是改了输入的信息，上下文还是影响到了AI，针对此做出紧急修复
+
 ```
 停！！！源码部分就是这里的"C:\Users\kelai\Downloads\代码部分.md"
 ```
+
 原来是我自己的问题，我忘记保存了
-![局部截取_030214](../assets/局部截取_030214.png)
+![局部截取_20260623_030214 1](../assets/局部截取_20260623_030214 1.png)
 已更新上述的计划
 批量处理第二份的课设
+
 ```
 "
-[SKILL.md](/ke-she/04-格式skill制作/引用文件/skill/)  
+"E:\AI\zcode\object\skills\course-design-report\SKILL.md"  
 这是你的skill  
 我提供的信息是：  
 E:\AI\zcode\object\skills\课设1.md"名字是王鑫豪，202508064102  
 输出  
 C:\Users\kelai\Downloads\输出课设  
 ```
+
 为了修复雷同
+
 ```
 环境保持隔离啊，加入skill之后把样板移动到AI-debug，并且说明不要让调用skill的AI读这个文件
 ```
 
 # 执行结果
+
 ## ✅ Step 6 · 汇报总结
 
 ---
@@ -289,24 +336,24 @@ C:\Users\kelai\Downloads\输出课设
 
 ### 2. 📋 代码截图已生成（6张）
 
-|图号|内容|来源|
-|---|---|---|
-|图 2-1|MainFrame 游戏主窗口类声明与字段|类声明 + 字段区|
-|图 2-2|MainFrame 构造函数|窗口初始化 + Panel 装配|
-|图 2-3|`initGameData()` 游戏数据初始化方法|数据库初始化 + 角色加载|
-|图 2-4|`showPanel()` 面板切换与自动存档方法|自动存档 + CardLayout 切换|
-|图 2-5|`loginAsUser()` 与 `logout()` 登录注销方法|用户进度加载/清空|
-|图 2-6|`createScaledEnemy()` 世界等级数值缩放方法|原神WL缩放公式|
+| 图号    | 内容                                  | 来源                   |
+| ----- | ----------------------------------- | -------------------- |
+| 图 2-1 | MainFrame 游戏主窗口类声明与字段               | 类声明 + 字段区            |
+| 图 2-2 | MainFrame 构造函数                      | 窗口初始化 + Panel 装配     |
+| 图 2-3 | `initGameData()` 游戏数据初始化方法          | 数据库初始化 + 角色加载        |
+| 图 2-4 | `showPanel()` 面板切换与自动存档方法           | 自动存档 + CardLayout 切换 |
+| 图 2-5 | `loginAsUser()` 与 `logout()` 登录注销方法 | 用户进度加载/清空            |
+| 图 2-6 | `createScaledEnemy()` 世界等级数值缩放方法    | 原神WL缩放公式             |
 
 ---
 
 ### 3. 🖼 需要你补充的图（共3处占位）
 
-|位置|图号|需要展示什么|
-|---|---|---|
-|2.4.2 核心类设计|图 2-7 系统 UML 类图|各层关键类（Player、Enemy、StorageManager、CombatSystem、各Panel）的属性、方法与依赖关系|
-|2.3 数据库表结构|图 2-8 数据库 ER 图|user / character / enemy / user_character 各表及其外键关联|
-|2.5.3|图 2-9 系统运行截图|程序实际运行效果（主菜单界面 + 战斗界面 BattlePanel）|
+| 位置          | 图号              | 需要展示什么                                                            |
+| ----------- | --------------- | ----------------------------------------------------------------- |
+| 2.4.2 核心类设计 | 图 2-7 系统 UML 类图 | 各层关键类（Player、Enemy、StorageManager、CombatSystem、各Panel）的属性、方法与依赖关系 |
+| 2.3 数据库表结构  | 图 2-8 数据库 ER 图  | user / character / enemy / user_character 各表及其外键关联                |
+| 2.5.3       | 图 2-9 系统运行截图    | 程序实际运行效果（主菜单界面 + 战斗界面 BattlePanel）                                |
 
 把截图发给我，我会直接插入对应位置重新生成。
 
@@ -324,4 +371,5 @@ C:\Users\kelai\Downloads\输出课设
 
 - **2.6 典型 Bug 记录与修改过程** — 如需补充，把每个 Bug 的「问题 / 原因 / 修改」发给我，至少5个
 - **1.3 工作计划** 中的具体周次 — 已用通用表述填写，如有实际安排请告知
-# 后接上文
+  
+  # 后接上文

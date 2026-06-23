@@ -1,10 +1,20 @@
 ---
-title: "GitHub上线托管实现路径"
+title: "GitHub 上线托管实现路径"
 ---
 
-## 
+> 整理说明：此文件是在副本目录中整理的版本，尽量保留原话，只补充标题、分段和链接指向。
+
+## 文档定位
+
+- 内容类型：部署操作记录
+- 关注重点：GitHub 新建仓库、推送、Cloudflare Pages 部署、自定义域名与 SSL 排查。
+- 相关附件与外部链接：见 [链接整理/链接索引.md](/ke-she/assets/链接索引/)
+- 原始备份：见 [原始备份_课设内容大分级/github上线托管实现路径.md](/ke-she/03-课设展示网站/原始备份_课设内容大分级/github上线托管实现路径/)
+
+## 正文记录
+
 首先登陆网站
-![GitHub 登录页](../assets/chrome_210135.png)
+![chrome.exe_20260622_210135 1](../assets/chrome.exe_20260622_210135 1.png)
 1. 打开浏览器并访问：**[https://github.com/new](https://github.com/new)** （如果还没登录 GitHub，请先登录）。
 2. 在 **Repository name** 输入框中，起一个名字，例如：`web-imitation-tool`。
 3. 确保选择 **Public**（公开）。
@@ -13,7 +23,7 @@ title: "GitHub上线托管实现路径"
 6. 创建成功后，您会看到一个页面，上面有一个以 `.git` 结尾的链接，类似这样： `https://github.com/您的用户名/web-imitation-tool.git`
    
 ## 第二步 
-![chrome 登录](../assets/chrome_210527.png)
+![chrome.exe_20260622_210527](../assets/chrome.exe_20260622_210527.png)
 由于您本地的命令行是完全交互式的，可以直接响应弹窗或输入。请在您的电脑上打开终端（PowerShell 或 CMD），定位到项目目录并运行以下命令：
 ```powershell
 cd "E:\AI\zcode\object\Web imitation\tool"
@@ -41,7 +51,7 @@ TIP
     - 点击右侧的 **Create application** (创建应用程序) 按钮。
     - 切换到 **Pages** 选项卡。
     - 点击 **Connect to Git** (连接到 Git) 按钮。
-    - ![Cloudflare 连接 Git](../assets/cloudflare_connect_git.png)
+    - ![Pasted image 20260622211816](../assets/Pasted image 20260622211816.png)
 3. **选择并关联仓库**：
     
     - 如果是第一次使用，系统会提示您授权 Cloudflare 访问您的 GitHub 账号。
@@ -72,16 +82,16 @@ Build output directory (构建输出目录): dist
 Production branch (生产分支): main
 Framework preset (框架预设): 选择 Astro
 这些没有喵
-![局部截取_212427](../assets/局部截取_212427.png)
+![局部截取_20260622_212427](../assets/局部截取_20260622_212427.png)
 原来是这里没有看到这里不是静态页面
 跳转到这个界面
-![局部截取_212523](../assets/局部截取_212523.png)
+![局部截取_20260622_212523](../assets/局部截取_20260622_212523.png)
 **Import an existing Git repository** (导入现有的 Git 仓库) 右侧的 **Get started** 按钮。
 
 接着，授权您的 GitHub 账号并选中 `web-write-tool` 仓库，就可以开始配置构建参数了！
 
 ## 成功
-![chrome_213846](../assets/chrome_213846.png)
+![chrome.exe_20260622_213846](../assets/chrome.exe_20260622_213846.png)
 我已经搭建完成啦，哇哦  
 https://web-write-tool.pages.dev/  
 请问这里，因为我有一个域名，之前买的，不知道怎么指向这个网站呢
@@ -127,7 +137,7 @@ https://web-write-tool.pages.dev/
 
 ## 错误
 但是还没有办法访问
-![局部截取_221054](../assets/局部截取_221054.png)
+![局部截取_20260622_221054](../assets/局部截取_20260622_221054.png)
 **`ERR_SSL_VERSION_OR_CIPHER_MISMATCH`** 错误代表：**您的域名解析已经成功指向了 Cloudflare，但 Cloudflare 还在为您的域名申请和安装 SSL 安全（HTTPS）证书**。
 
 因为还没有生成好安全证书，浏览器无法建立加密连接，所以会报错拦截。
@@ -144,7 +154,7 @@ https://web-write-tool.pages.dev/
 3. 只需要等待几分钟，Cloudflare 就会自动把证书搞定。
 
 ## 等待回馈
-![chrome_223705](../assets/chrome_223705.png)
+![chrome.exe_20260622_223705](../assets/chrome.exe_20260622_223705.png)
 这个页面（**Error 1001 DNS resolution error**）其实是一个非常好的信号！它代表：
 
 1. **域名解析已经成功**：您在阿里云设置的 CNAME 已经完全生效，并且流量已经成功到达了 Cloudflare 的服务器！
