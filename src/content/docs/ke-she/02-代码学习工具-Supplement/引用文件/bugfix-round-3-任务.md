@@ -476,7 +476,7 @@ cd android
 
 ### 4.0 决策已定（用户拍板）
 
-- **字体文件**：`乐米小奶泡体.ttf`（4.6MB，用户提供的 `C:\Users\kelai\Downloads\乐米小奶泡体_猫啃网.zip` 解压后即得）
+- **字体文件**：`乐米小奶泡体.ttf`（4.6MB，用户提供的 `C:\Users\user\Downloads\乐米小奶泡体_猫啃网.zip` 解压后即得）
 - **加载方式**：本地打包（`@font-face` + 资产随包），离线可用
 - **应用范围**：文章/说明区使用可爱字体，编辑器和 mono 代码区保持原样
 
@@ -503,7 +503,7 @@ cd android
 
 ```bash
 # 从用户下载的 zip 解压出 ttf，复制到 andraw 的 assets 目录
-# 源：C:\Users\kelai\Downloads\乐米小奶泡体_猫啃网.zip 解压后得到 乐米小奶泡体/乐米小奶泡体.ttf
+# 源：C:\Users\user\Downloads\乐米小奶泡体_猫啃网.zip 解压后得到 乐米小奶泡体/乐米小奶泡体.ttf
 # 目标：E:\AI\antigravity\stady-code\zcode-andraw\andraw\src\assets\fonts\lemi_font.ttf
 ```
 

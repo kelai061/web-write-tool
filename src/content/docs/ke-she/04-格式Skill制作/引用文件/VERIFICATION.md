@@ -15,7 +15,7 @@ title: "Carbon 截图模块验证报告 (VERIFICATION REPORT)"
   - **背景 (Background)**：完全透明 (`bg=rgba(255,255,255,0)`)。
   - **窗口风格**：带有 macOS 三色圆点窗口控件。
   - **字体与语法高亮**：`one-light` 浅色主题，`Hack 14px` 等宽字体，Java/Properties 关键字自动高亮。
-  - **水印**：右下角带有半透明 `kelai` 专属水印。
+  - **水印**：右下角带有半透明 `user` 专属水印。
   - **健康度**：**100% 纯净**，不包含任何 Next.js 运行时或编译错误堆栈。
 
 ---

@@ -4,7 +4,7 @@ title: "Implementation Plan - Course Design Report Skill Template & Automation"
 
 
 
-The goal is to recreate a formatting template file (`template.docx`) based on the formatting specifications of `课程设计格式2026---罗菁2026.6.12.doc` (which we have converted to `template_source.docx`), replacing the text-based sample code inside it with a Carbon-style screenshot of the `carbon` project itself (`E:\AI\antigravity\stady-code\supplement\carbon`). We will also align the Python environments and verify the whole skill end-to-end.
+The goal is to recreate a formatting template file (`template.docx`) based on the formatting specifications of `课程设计格式2026---指导教师2026.6.12.doc` (which we have converted to `template_source.docx`), replacing the text-based sample code inside it with a Carbon-style screenshot of the `carbon` project itself (`E:\AI\antigravity\stady-code\supplement\carbon`). We will also align the Python environments and verify the whole skill end-to-end.
 
 ## User Review Required
 
@@ -14,7 +14,7 @@ The goal is to recreate a formatting template file (`template.docx`) based on th
 >   - Theme: `one-light` (white)
 >   - Window Theme: `mac` (3-color dots)
 >   - Shadow/Border: Disabled (`ds=false`, transparent background `rgba(255,255,255,0)`)
->   - Watermark: `kelai` (added in the bottom right corner via post-processing PIL library since Carbon's own watermark URL query is a binary logo switch)
+>   - Watermark: `user` (added in the bottom right corner via post-processing PIL library since Carbon's own watermark URL query is a binary logo switch)
 > - **Template recreation strategy**: We will write a script to load the original template paragraphs from the converted docx, find the contiguous paragraph blocks representing Java code, delete those code paragraphs, insert the generated Carbon screenshot at their locations, and save it as `assets/template.docx` inside the skill directory.
 
 ## Open Questions
@@ -43,7 +43,7 @@ The final styling and layout template file, containing the correct styles (margi
 
 ### Python Environment Alignment
 
-We will configure the python commands to use the path `C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe` (which contains `python-docx` and `pillow`) or install `python-docx` in the active environment if desired.
+We will configure the python commands to use the path `C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe` (which contains `python-docx` and `pillow`) or install `python-docx` in the active environment if desired.
 
 ---
 
@@ -71,11 +71,11 @@ Ensure:
    ```bash
    node scripts/screenshot.js --code E:\AI\antigravity\stady-code\supplement\carbon\next.config.js --lang javascript --out test_carbon.png
    ```
-   Verify `test_carbon.png` is generated with the `kelai` watermark and transparent background.
+   Verify `test_carbon.png` is generated with the `user` watermark and transparent background.
 4. **Template Rebuilding**: Run the `rebuild_template.py` script to generate `assets/template.docx`.
 5. **Document Assembly Test**: Run:
    ```bash
-   "C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe" scripts/build_docx.py --content test/content.json --out test/test_report.docx
+   "C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe" scripts/build_docx.py --content test/content.json --out test/test_report.docx
    ```
    Verify that `test_report.docx` compiles successfully.
 

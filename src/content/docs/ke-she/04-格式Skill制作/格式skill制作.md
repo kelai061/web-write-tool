@@ -24,7 +24,7 @@ description: "通过大语言模型定制开发的 Word 报告自动化生成 Sk
 
 **步骤**：
 1. **发送你的个人信息和课设草稿**，例如：
-   > "帮我把这些整理成课设报告。我是软件 2201 班的张三，学号 202208080101。下面是我的课设草案和代码：……[粘贴你的草稿、类设计说明、核心 Java 代码等]……"
+   > "帮我把这些整理成课设报告。我是软件 2201 班的学生丙，学号 20220808XXXX。下面是我的课设草案和代码：……[粘贴你的草稿、类设计说明、核心 Java 代码等]……"
 2. **AI 会自动处理**：
    - 自动检测并提取班级、学号、姓名等封面字段。
    - 自动分析你发来的代码段，将其通过本地 Carbon 服务渲染为精美的代码截图（单次长度不超过 30 行以保证观感）。
@@ -58,7 +58,7 @@ node scripts/screenshot.js --code <代码文件路径> --lang java --out assets/
 #### 第四步：手动装配 Word 报告
 使用 Python 3.13 解释器一键装配最终的 Word 文档：
 ```powershell
-C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe scripts/build_docx.py --content <你的content.json路径> --template assets/template.docx --out E:\AI\zcode\object\skills\course-design-report\我的课程设计报告.docx
+C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe scripts/build_docx.py --content <你的content.json路径> --template assets/template.docx --out E:\AI\zcode\object\skills\course-design-report\我的课程设计报告.docx
 ```
 
 ---
@@ -89,10 +89,10 @@ Carbon 并不是一个像 GCC 或 Pandoc 那样可以直接在命令行后台输
 这是一个 Skill 的文件夹，你要做的是制作 skill 工具，并且是新建文件夹，然后保存在里面
 
 接下来我希望你分析这个文档
-"C:\Users\kelai\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---罗菁2026.6.12.doc"
+"C:\Users\user\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---指导教师2026.6.12.doc"
 提取格式特点，并重新制定一份模板文件
 其中里面的代码换成这个项目的一个截图
-配置：没有背景边框，mac，水印kelai，白色
+配置：没有背景边框，mac，水印user，白色
 项目地址：E:\AI\antigravity\stady-code\Supplement\carbon
 
 这个 skill 的功能就是输入一大堆信息，让 AI 进行分析，并根据指定格式把相关内容写进新文档，重新输出一份文档出来。
@@ -261,19 +261,19 @@ E:\AI\zcode\object\skills\course-design-report\scratch\extracted_media
 
 ---
 
-#### 批量课设处理测试一 (欧昌斌)
+#### 批量课设处理测试一 (学生乙)
 在新 AI 窗口中测试实际课设数据的全自动整理：
 ```markdown
 "E:\AI\zcode\object\skills\course-design-report\SKILL.md"  
 这是你的skill  
 我提供的信息是：  
-"C:\Users\kelai\Downloads\课程设计格式2026---罗菁2026.6.12.doc"
+"C:\Users\user\Downloads\课程设计格式2026---指导教师2026.6.12.doc"
 
-"C:\Users\kelai\Downloads\代码部分.md"  
+"C:\Users\user\Downloads\代码部分.md"  
 输出  
-C:\Users\kelai\Downloads\输出课设  
+C:\Users\user\Downloads\输出课设  
 
-欧昌斌，202508064103
+学生乙，20250806XXXX
 ```
 运行中途 AI 查找源码：
 ```markdown
@@ -282,25 +282,25 @@ E:\AI\zcode\object\ke-she\dist\GenshinRPG
 ```
 
 相关资料：
-- **欧昌斌测试 AI 执行计划**：[课设正式测试-计划](/ke-she/04-格式skill制作/引用文件/gemini日志/课设正式测试-计划/)
+- **学生乙测试 AI 执行计划**：[课设正式测试-计划](/ke-she/04-格式skill制作/引用文件/gemini日志/课设正式测试-计划/)
 
 紧急纠偏：
 ```markdown
-停！！！源码部分就是这里的"C:\Users\kelai\Downloads\代码部分.md"
+停！！！源码部分就是这里的"C:\Users\user\Downloads\代码部分.md"
 ```
 （原因为用户自己忘记保存了）
 
 ---
 
-#### 批量课设处理测试二 (王鑫豪)
+#### 批量课设处理测试二 (学生甲)
 
 ```markdown
 "E:\AI\zcode\object\skills\course-design-report\SKILL.md"  
 这是你的skill  
 我提供的信息是：  
-E:\AI\zcode\object\skills\课设1.md"名字是王鑫豪，202508064102  
+E:\AI\zcode\object\skills\课设1.md"名字是学生甲，20250806XXXX  
 输出  
-C:\Users\kelai\Downloads\输出课设  
+C:\Users\user\Downloads\输出课设  
 ```
 
 为防人设雷同和缓存穿透：
@@ -308,8 +308,8 @@ C:\Users\kelai\Downloads\输出课设
 环境保持隔离啊，加入skill之后把样板移动到AI-debug，并且说明不要让调用skill的AI读这个文件
 ```
 
-#### 王鑫豪测试最终执行结果：
-1. **输出文件**：`课程设计报告_王鑫豪_202508064102.docx`（已输出至 `C:\Users\kelai\Downloads\输出课设\`）。
+#### 学生甲测试最终执行结果：
+1. **输出文件**：`课程设计报告_学生甲_20250806XXXX.docx`（已输出至 `C:\Users\user\Downloads\输出课设\`）。
 2. **生成代码截图 (6张)**：
    - 图 2-1 MainFrame 核心声明与字段
    - 图 2-2 MainFrame 构造函数

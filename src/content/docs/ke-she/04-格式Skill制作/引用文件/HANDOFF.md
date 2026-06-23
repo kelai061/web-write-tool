@@ -31,19 +31,19 @@ title: "交接文档：course-design-report Skill"
 
 - 截图方案：**启动 carbon 本地服务（yarn dev）+ puppeteer 截图**（不用 carbon-now CLI、不用纯 Python）
 - 语言高亮：**自动识别**（detect_language.py）
-- Carbon 配置：**无背景边框（透明）、mac 窗口控件、水印 kelai、白色主题**
+- Carbon 配置：**无背景边框（透明）、mac 窗口控件、水印 user、白色主题**
 - Skill 触发关键词：仅 **「课程设计 / 课设报告 / 面向对象课设」** 这一组
 
 ### 关键路径
 
 - Skill 目录：`E:\AI\zcode\object\skills\course-design-report\`
 - carbon 项目（用户提供，作为截图引擎）：`E:\AI\antigravity\stady-code\supplement\carbon`
-- 原格式参考 doc：`C:\Users\kelai\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---罗菁2026.6.12.doc`（前一位 AI 已用 Word COM 提取过完整内容与格式参数，结果见 references/format-spec.md）
+- 原格式参考 doc：`C:\Users\user\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---指导教师2026.6.12.doc`（前一位 AI 已用 Word COM 提取过完整内容与格式参数，结果见 references/format-spec.md）
 
 ### carbon 项目踩过的坑（重要）
 
-- carbon 的 `wm` URL 参数**是开关不是水印文本**。源码 `components/svg/Watermark.js` 里的水印是硬编码的 "carbon" 商标 SVG，**不能通过 URL 改成 "kelai"**。
-- 解决方案已写入 `references/carbon-setup.md`：URL 里 `wm=false` 关掉 carbon 商标，截图后用 PIL 在 PNG 右下角叠加 "kelai" 文字水印。
+- carbon 的 `wm` URL 参数**是开关不是水印文本**。源码 `components/svg/Watermark.js` 里的水印是硬编码的 "carbon" 商标 SVG，**不能通过 URL 改成 "user"**。
+- 解决方案已写入 `references/carbon-setup.md`：URL 里 `wm=false` 关掉 carbon 商标，截图后用 PIL 在 PNG 右下角叠加 "user" 文字水印。
 - carbon 的 URL 参数清单见 `lib/routing.js` 的 `readMappings`（已在 carbon-setup.md 列出本项目用到的全部参数）。
 
 ---
@@ -86,7 +86,7 @@ E:\AI\zcode\object\skills\course-design-report\
 
 **scripts/build_docx.py**：读 content.json → 复制 template（或新建）→ 写封面/TOC/章节/代码图/表格/图占位 → 设置页眉页脚 → 让 Word 打开时更新域。核心函数：`write_cover`、`write_toc`、`write_heading`、`write_body_paragraph`、`write_code_image`、`write_table`（含三线表 `_apply_three_line_borders`）、`add_page_number_field`、`add_toc_field`。
 
-**scripts/screenshot.js**：Node 脚本。读代码→构造 carbon URL→puppeteer 打开 localhost:3000→等 `.export-container`→元素截图→PIL 加 kelai 水印。含行数硬上限 50、URL 长度上限 7500、ECONNREFUSED 友好报错。
+**scripts/screenshot.js**：Node 脚本。读代码→构造 carbon URL→puppeteer 打开 localhost:3000→等 `.export-container`→元素截图→PIL 加 user 水印。含行数硬上限 50、URL 长度上限 7500、ECONNREFUSED 友好报错。
 
 **assets/content.schema.json**：JSON Schema 定义 + 一个完整的最小示例 `example_full_minimal`，AI 产出 content.json 时照此结构。
 
@@ -98,7 +98,7 @@ E:\AI\zcode\object\skills\course-design-report\
 
 前一位 AI 在做端到端自测时发现 **python-docx 装错了 Python 环境**：
 
-- `pip install python-docx` 装到了 `C:\Users\kelai\AppData\Local\Programs\Python\Python313\` （Python 3.13）
+- `pip install python-docx` 装到了 `C:\Users\user\AppData\Local\Programs\Python\Python313\` （Python 3.13）
 - 但默认 `python` 命令走的是 venv：`E:\AI\hermes-agent\data\hermes-agent\venv\Scripts\python.exe`，该 venv 里没有 docx
 - Pillow 12.2.0 在两个环境都有
 
@@ -110,7 +110,7 @@ E:\AI\zcode\object\skills\course-design-report\
 
 ```bash
 # 验证：
-"C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe" -c "import docx, PIL; print('both OK')"
+"C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe" -c "import docx, PIL; print('both OK')"
 ```
 
 若要让默认 `python` 也能用，把 docx 装到 venv：
@@ -142,9 +142,9 @@ E:\AI\zcode\object\skills\course-design-report\
     "title": "面向对象程序设计",
     "department": "计算机学院",
     "class": "软件 2201",
-    "studentId": "202208080101",
-    "name": "张三",
-    "teacher": "罗菁",
+    "studentId": "20220808XXXX",
+    "name": "学生丙",
+    "teacher": "指导教师",
     "date": "2026 年 6 月"
   },
   "sections": [
@@ -228,7 +228,7 @@ python scripts/build_docx.py --content test/content.json --out test/报告测试
 - [ ] 表格是三线表（顶/底粗线、表头下细线、无竖线）
 - [ ] 代码图居中、图注在图下方居中
 - [ ] 图占位是灰色文字
-- [ ] 页眉有「面向对象程序设计课程设计 软件2201 张三」
+- [ ] 页眉有「面向对象程序设计课程设计 软件2201 学生丙」
 - [ ] 页脚有 `- N -` 页码（Word 打开会显示）
 
 **2.5 修复 build_docx.py 发现的问题**。可能的问题：
@@ -268,7 +268,7 @@ echo 'public class DbUtils {
 node scripts/screenshot.js --code test_dbutils.java --lang java --out test/dbutils.png --caption "图 2-1 DbUtils"
 ```
 
-**预期**：生成 `test/dbutils.png`，是 mac 窗口风格的浅色代码图，右下角有半透明 "kelai" 水印。
+**预期**：生成 `test/dbutils.png`，是 mac 窗口风格的浅色代码图，右下角有半透明 "user" 水印。
 
 **故障排查**（按 `references/carbon-setup.md` 的表格）：
 
@@ -384,8 +384,8 @@ python scripts/build_template.py    # 这个脚本还没写，需要时再补
 | 截图脚本                   | `E:\AI\zcode\object\skills\course-design-report\scripts\screenshot.js`                             |
 | content.json 结构        | `E:\AI\zcode\object\skills\course-design-report\assets\content.schema.json`                        |
 | carbon 项目（截图引擎）        | `E:\AI\antigravity\stady-code\supplement\carbon`                                                   |
-| 原格式参考 doc              | `C:\Users\kelai\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---罗菁2026.6.12.doc` |
-| Python 3.13（有 docx）    | `C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe`                                |
+| 原格式参考 doc              | `C:\Users\user\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---指导教师2026.6.12.doc` |
+| Python 3.13（有 docx）    | `C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe`                                |
 | 默认 python（venv，无 docx） | `E:\AI\hermes-agent\data\hermes-agent\venv\Scripts\python.exe`                                     |
 
 ---

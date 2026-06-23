@@ -17,8 +17,8 @@ description: "Astro 展示站部署的 Git 命令流与持续集成配置。"
 ### 第一轮
 - 调研文件：`"E:\AI\zcode\object\ke-she\上线\README.md"`
 - 脑力日志：
-  - [第一轮建站计划书](file:///c:/Users/kelai/.gemini/antigravity/brain/beb8816f-2a2a-4f2c-a762-c9ad16d0b9ac/implementation_plan.md)
-  - [第一轮建站工作日志](file:///c:/Users/kelai/.gemini/antigravity/brain/beb8816f-2a2a-4f2c-a762-c9ad16d0b9ac/walkthrough.md)
+  - [第一轮建站计划书](file:///c:/Users/user/.gemini/antigravity/brain/beb8816f-2a2a-4f2c-a762-c9ad16d0b9ac/implementation_plan.md)
+  - [第一轮建站工作日志](file:///c:/Users/user/.gemini/antigravity/brain/beb8816f-2a2a-4f2c-a762-c9ad16d0b9ac/walkthrough.md)
 
 ### 第二轮：界面与主题重设计
 反馈修改：

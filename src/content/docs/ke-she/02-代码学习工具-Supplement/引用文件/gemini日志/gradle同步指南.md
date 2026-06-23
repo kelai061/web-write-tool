@@ -59,7 +59,7 @@ title: "Gradle Sync 国内网络配置与排错指南"
 
 在电脑当前用户的全局 Gradle 目录中创建拦截脚本：
 
-- **文件路径**：`C:\Users\kelai\.gradle\init.gradle`
+- **文件路径**：`C:\Users\user\.gradle\init.gradle`
 - **脚本内容**：
   
   ```groovy
@@ -125,7 +125,7 @@ title: "Gradle Sync 国内网络配置与排错指南"
 如果以后导入新 Android 项目又遇到网络爆红，请按以下步骤快速排查：
 
 1. [ ] **检查浏览器能否正常打开国内网页**：确保没有欠费或校园网 Portal 未登录。
-2. [ ] **检查全局拦截脚本是否存在**：打开 `C:\Users\kelai\.gradle\init.gradle`，确认代码完整无损。
+2. [ ] **检查全局拦截脚本是否存在**：打开 `C:\Users\user\.gradle\init.gradle`，确认代码完整无损。
 3. [ ] **检查 Android Studio 代理**：确认 HTTP Proxy 设置为 `No proxy`。
 4. [ ] **检查项目 `gradle.properties`**：确认没有硬编码残留的 `systemProp.http` 代理配置。
 5. [ ] **强制重置进程**：在终端执行 `.\gradlew.bat --stop` 杀死守护进程，然后重新点击 **`Try Again`**。

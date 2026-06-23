@@ -40,7 +40,7 @@ git push -u origin main
 ---
 
 ### 第三步：关联 Cloudflare Pages 部署
-代码已成功更新，并推送到您的 GitHub 仓库：[https://github.com/kelai061/web-write-tool](https://github.com/kelai061/web-write-tool)。
+代码已成功更新，并推送到您的 GitHub 仓库：[https://github.com/user_github/web-write-tool](https://github.com/user_github/web-write-tool)。
 
 > [!TIP]
 > 已经帮您把 `astro.config.mjs` 中的 `site` 域名配置更新为了 `https://web-write-tool.pages.dev`，这样等部署完成后，您网站的 Sitemap 和搜索引擎优化（SEO）就会自动匹配正确的域名。

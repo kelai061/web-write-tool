@@ -22,7 +22,7 @@ This walkthrough documents the technical changes and verification steps complete
 - **Solution**: Completely rewrote [rebuild_template.py](file:///E:/AI/zcode/object/skills/course-design-report/scripts/rebuild_template.py) to:
   1. Extract the actual text content of the 9 separate code blocks from the source document `template_source.docx`.
   2. Implement code-splitting logic: If a code block is longer than 30 lines, split it into chunks of up to 30 lines.
-  3. Invoke `screenshot.js` via Node to generate unique Carbon screenshots (with no background border, transparent background, mac theme, and `kelai` watermark) for each chunk.
+  3. Invoke `screenshot.js` via Node to generate unique Carbon screenshots (with no background border, transparent background, mac theme, and `user` watermark) for each chunk.
   4. Replace the original placeholder paragraphs in the document with the respective images and add sequential captions (and "（续）" captions for splits).
 - **Result**: Successfully created 14 unique code screenshots and rebuilt the final [template.docx](file:///E:/AI/zcode/object/skills/course-design-report/assets/template.docx) (1.2 MB).
 
@@ -71,7 +71,7 @@ STDERR:
 [OK] screenshot.js test passed successfully!
 
 === Testing build_docx.py ===
-Running command: C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe E:\AI\zcode\object\skills\course-design-report\scripts\build_docx.py --content E:\AI\zcode\object\skills\course-design-report\test\test_content.json --template E:\AI\zcode\object\skills\course-design-report\assets\template.docx --out E:\AI\zcode\object\skills\course-design-report\test\test_report.docx
+Running command: C:\Users\user\AppData\Local\Programs\Python\Python313\python.exe E:\AI\zcode\object\skills\course-design-report\scripts\build_docx.py --content E:\AI\zcode\object\skills\course-design-report\test\test_content.json --template E:\AI\zcode\object\skills\course-design-report\assets\template.docx --out E:\AI\zcode\object\skills\course-design-report\test\test_report.docx
 STDOUT: 
 STDERR: OK: E:\AI\zcode\object\skills\course-design-report\test\test_report.docx
 
