@@ -2,7 +2,7 @@
 title: "验收报告：course-design-report Skill（其他 AI 接手版本）"
 ---
 
-# 验收报告：course-design-report Skill（其他 AI 接手版本）
+
 
 > 验收人：ZCode（原 skill 设计者）
 > 验收对象：另一 AI 在 `9a478ec7` 会话里完成的工作，记录于 `walkthrough.md`

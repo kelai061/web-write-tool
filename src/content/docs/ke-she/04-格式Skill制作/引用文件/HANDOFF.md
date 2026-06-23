@@ -2,7 +2,7 @@
 title: "交接文档：course-design-report Skill"
 ---
 
-# 交接文档：course-design-report Skill
+
 
 > 接手者必读：本文档记录一个 ZCode Skill 的开发进度与剩余计划。前一位 AI 因 token 紧张无法完成端到端验证，把工作交接给你。**请先通读「项目背景」与「已完成清单」，然后按「剩余计划」逐步推进，最后用「验收目标」自查。**
 

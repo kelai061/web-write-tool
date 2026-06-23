@@ -2,7 +2,7 @@
 title: "Walkthrough - Course Design Report Formatting & Setup"
 ---
 
-# Walkthrough - Course Design Report Formatting & Setup
+
 
 This walkthrough documents the technical changes and verification steps completed to address the formatting template requirements for the `course-design-report` skill.
 

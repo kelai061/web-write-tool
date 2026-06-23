@@ -40,16 +40,26 @@ export default defineConfig({
           ],
         },
 
-        // —— 课设项目（手动 5 条） ——
+        // —— 课设项目（自动扫描所有文件） ——
         {
-          label: '课设项目',
-          items: [
-            { label: '总览',                     link: '/ke-she/00-总览/项目合集/' },
-            { label: '基础课设 · GenshinRPG',    link: '/ke-she/01-基础课设-genshinrpg/基础课设项目/' },
-            { label: '代码学习工具 · Supplement', link: '/ke-she/02-代码学习工具-supplement/代码学习工具项目/' },
-            { label: '课设展示网站',             link: '/ke-she/03-课设展示网站/课设展示网站项目/' },
-            { label: '格式 Skill 制作',          link: '/ke-she/04-格式skill制作/格式skill制作/' },
-          ],
+          label: '00 - 总览',
+          autogenerate: { directory: 'ke-she/00-总览' },
+        },
+        {
+          label: '01 - 基础课设 (GenshinRPG)',
+          autogenerate: { directory: 'ke-she/01-基础课设-GenshinRPG' },
+        },
+        {
+          label: '02 - 代码学习工具 (Supplement)',
+          autogenerate: { directory: 'ke-she/02-代码学习工具-Supplement' },
+        },
+        {
+          label: '03 - 课设展示网站',
+          autogenerate: { directory: 'ke-she/03-课设展示网站' },
+        },
+        {
+          label: '04 - 格式 Skill 制作',
+          autogenerate: { directory: 'ke-she/04-格式Skill制作' },
         },
       ],
 

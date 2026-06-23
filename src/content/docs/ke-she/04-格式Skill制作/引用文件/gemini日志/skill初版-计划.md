@@ -2,7 +2,7 @@
 title: "Implementation Plan - Course Design Report Skill Template & Automation"
 ---
 
-# Implementation Plan - Course Design Report Skill Template & Automation
+
 
 The goal is to recreate a formatting template file (`template.docx`) based on the formatting specifications of `课程设计格式2026---罗菁2026.6.12.doc` (which we have converted to `template_source.docx`), replacing the text-based sample code inside it with a Carbon-style screenshot of the `carbon` project itself (`E:\AI\antigravity\stady-code\supplement\carbon`). We will also align the Python environments and verify the whole skill end-to-end.
 

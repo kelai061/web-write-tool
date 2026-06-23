@@ -2,7 +2,7 @@
 title: "Gradle Sync 国内网络配置与排错指南"
 ---
 
-# Gradle Sync 国内网络配置与排错指南
+
 
 > 制定日期：2026-06-22
 > 编写背景：解决 `zut-stu` 校园网环境 + Clash Verge 代理下，Android Studio 同步 Gradle 依赖多次失败（超时、403 Forbidden、SSL peer shut down）的问题。

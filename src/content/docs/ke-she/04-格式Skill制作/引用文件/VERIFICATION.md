@@ -2,7 +2,7 @@
 title: "Carbon 截图模块验证报告 (VERIFICATION REPORT)"
 ---
 
-# Carbon 截图模块验证报告 (VERIFICATION REPORT)
+
 
 本报告详细记录了对课设报告中所涉及的 **9 个关键代码块（共分块为 14 张截图）** 进行 Carbon 截图生成的质量检验。
 
