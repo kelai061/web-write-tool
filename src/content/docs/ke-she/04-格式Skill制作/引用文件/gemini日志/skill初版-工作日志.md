@@ -10,12 +10,12 @@ This walkthrough documents the technical changes and verification steps complete
 
 ### 1. Fixed Carbon SSR Crash
 - **Problem**: Next.js server-side pre-rendered the home and embed pages. CodeMirror (from `react-codemirror2` package) references `document` globally at import time, which crashed the Next.js server in Node environments.
-- **Solution**: Created [CodeMirrorWrapper.js](file:///E:/AI/antigravity/stady-code/Supplement/carbon/components/CodeMirrorWrapper.js) to wrap `react-codemirror2` and use `React.forwardRef` to pass references.
-- **Integration**: Updated [Carbon.js](file:///E:/AI/antigravity/stady-code/Supplement/carbon/components/Carbon.js) to dynamically import `CodeMirrorWrapper` via `next/dynamic` with `ssr: false`. This completely bypassed server-side loading of CodeMirror, resolving the crash.
+- **Solution**: Created [CodeMirrorWrapper.js](file:///E:/AI/antigravity/stady-code/supplement/carbon/components/CodeMirrorWrapper.js) to wrap `react-codemirror2` and use `React.forwardRef` to pass references.
+- **Integration**: Updated [Carbon.js](file:///E:/AI/antigravity/stady-code/supplement/carbon/components/Carbon.js) to dynamically import `CodeMirrorWrapper` via `next/dynamic` with `ssr: false`. This completely bypassed server-side loading of CodeMirror, resolving the crash.
 
 ### 2. Fixed Next.js Dynamic Routing Mismatch Overlay Error
 - **Problem**: When loading the Carbon homepage with query parameters (e.g. `http://localhost:3000/?code=...`), Next.js dynamic routing triggered an mismatch error: `The provided as value (/) is incompatible with the href value (/[id])`. This overlayed a red stack trace screen on top of the browser viewport. As a result, the screenshot tool captured this error overlay instead of the actual code.
-- **Solution**: Updated [EditorContainer.js](file:///E:/AI/antigravity/stady-code/Supplement/carbon/components/EditorContainer.js) to check if `snippetId` is falsy, and push to `'/'` instead of `'{ pathname: "/[id]", query: { id: undefined } }'`. This resolved the routing mismatch, removing the dev error overlay.
+- **Solution**: Updated [EditorContainer.js](file:///E:/AI/antigravity/stady-code/supplement/carbon/components/EditorContainer.js) to check if `snippetId` is falsy, and push to `'/'` instead of `'{ pathname: "/[id]", query: { id: undefined } }'`. This resolved the routing mismatch, removing the dev error overlay.
 
 ### 3. Individual Code Screenshotting & Chunk Splitting for Template
 - **Problem**: The initial version of `rebuild_template.py` replaced all 9 Java code block placeholders with a single hardcoded dummy screenshot (`carbon_code.png`).

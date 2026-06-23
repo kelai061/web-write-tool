@@ -10,7 +10,7 @@ title: "格式Skill制作"
 提取格式特点，并重新制定一份模板文件
 其中里面的代码换成这个项目的一个截图
 配置：没有背景边框，mac，水印kelai，白色
-项目地址：E:\AI\antigravity\stady-code\Supplement\carbon
+项目地址：E:\AI\antigravity\stady-code\supplement\carbon
 
 这个 skill 的功能就是输入一大堆信息，让 AI 进行分析，并根据指定格式把相关内容写进新文档，重新输出一份文档出来。
 
@@ -87,7 +87,7 @@ powershell
 
 # 在 carbon 目录下运行开发服务器
 
-cd E:\AI\antigravity\stady-code\Supplement\carbon
+cd E:\AI\antigravity\stady-code\supplement\carbon
 
 npx yarn dev
 

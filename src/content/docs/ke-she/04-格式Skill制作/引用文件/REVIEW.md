@@ -31,7 +31,7 @@ title: "验收报告：course-design-report Skill（其他 AI 接手版本）"
 
 ### 1. Carbon SSR 崩溃的修复 ✅
 
-新增 `E:\AI\antigravity\stady-code\Supplement\carbon\components\CodeMirrorWrapper.js`，用 `React.forwardRef` 包了一层，再在 `Carbon.js` 里用 `next/dynamic` + `ssr: false` 动态导入。
+新增 `E:\AI\antigravity\stady-code\supplement\carbon\components\CodeMirrorWrapper.js`，用 `React.forwardRef` 包了一层，再在 `Carbon.js` 里用 `next/dynamic` + `ssr: false` 动态导入。
 
 **验证**：文件存在、内容正确（11 行的标准 forwardRef 包装）。这是真问题、真修复——carbon 的 react-codemirror2 在 SSR 阶段访问 `document` 是已知坑，这个处理是教科书式正确。
 

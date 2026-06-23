@@ -37,7 +37,7 @@ title: "交接文档：course-design-report Skill"
 ### 关键路径
 
 - Skill 目录：`E:\AI\zcode\object\skills\course-design-report\`
-- carbon 项目（用户提供，作为截图引擎）：`E:\AI\antigravity\stady-code\Supplement\carbon`
+- carbon 项目（用户提供，作为截图引擎）：`E:\AI\antigravity\stady-code\supplement\carbon`
 - 原格式参考 doc：`C:\Users\kelai\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---罗菁2026.6.12.doc`（前一位 AI 已用 Word COM 提取过完整内容与格式参数，结果见 references/format-spec.md）
 
 ### carbon 项目踩过的坑（重要）
@@ -243,7 +243,7 @@ python scripts/build_docx.py --content test/content.json --out test/报告测试
 **前置**：
 
 ```bash
-cd E:\AI\antigravity\stady-code\Supplement\carbon
+cd E:\AI\antigravity\stady-code\supplement\carbon
 yarn install          # 首次 5–10 分钟
 yarn dev              # 保持运行，等到 "ready - started server"
 ```
@@ -383,7 +383,7 @@ python scripts/build_template.py    # 这个脚本还没写，需要时再补
 | docx 装配脚本              | `E:\AI\zcode\object\skills\course-design-report\scripts\build_docx.py`                             |
 | 截图脚本                   | `E:\AI\zcode\object\skills\course-design-report\scripts\screenshot.js`                             |
 | content.json 结构        | `E:\AI\zcode\object\skills\course-design-report\assets\content.schema.json`                        |
-| carbon 项目（截图引擎）        | `E:\AI\antigravity\stady-code\Supplement\carbon`                                                   |
+| carbon 项目（截图引擎）        | `E:\AI\antigravity\stady-code\supplement\carbon`                                                   |
 | 原格式参考 doc              | `C:\Users\kelai\Documents\WXWork\1688856071809634\Cache\File\2026-06\课程设计格式2026---罗菁2026.6.12.doc` |
 | Python 3.13（有 docx）    | `C:\Users\kelai\AppData\Local\Programs\Python\Python313\python.exe`                                |
 | 默认 python（venv，无 docx） | `E:\AI\hermes-agent\data\hermes-agent\venv\Scripts\python.exe`                                     |

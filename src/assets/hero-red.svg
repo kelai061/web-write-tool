@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Warm red gradient -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <g filter="url(#dropShadow)">
+    <!-- Stacked Document 1 (Back) -->
+    <rect x="55" y="35" width="90" height="120" rx="6" fill="#fca5a5" opacity="0.5"/>
+    
+    <!-- Stacked Document 2 (Middle) -->
+    <rect x="45" y="45" width="90" height="120" rx="6" fill="#f87171" opacity="0.8"/>
+    
+    <!-- Document 3 (Front) -->
+    <rect x="35" y="55" width="90" height="120" rx="6" fill="url(#redGrad)"/>
+    
+    <!-- Code Symbol on front document </ > -->
+    <path d="M 60 100 L 50 110 L 60 120" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 100 100 L 110 110 L 100 120" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 85 95 L 75 125" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Line representation on documents -->
+    <line x1="50" y1="75" x2="110" y2="75" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+    <line x1="50" y1="87" x2="90" y2="87" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.9"/>
+  </g>
+</svg>

@@ -1,44 +1,45 @@
 ---
 title: 首页
-description: 可莉的课设作品集与学习笔记。
+description: 课设作品集与学习笔记展示平台。
 template: splash
 hero:
-  tagline: 软件工程专业学生的课设作品集与学习笔记
+  tagline: 个人课设作品集与技术实践展示平台
   image:
-    file: ../../assets/hero-klee.svg
+    file: ../../assets/hero-red.svg
   actions:
     - text: 浏览课设项目
       link: /ke-she/00-总览/项目合集/
       icon: right-arrow
       variant: primary
-    - text: 关于我
+    - text: 关于本站
       link: /about/
       icon: right-arrow
 ---
 
 import { CardGrid, Card } from '@astrojs/starlight/components';
 
-## 我的课设项目
+## 课设项目合集
 
 <CardGrid stagger>
-  <Card title="基础课设 · GenshinRPG" icon="seti:java" href="/ke-she/01-基础课设-GenshinRPG/基础课设项目/">
-    Java Swing + MySQL 的原神风文字 RPG，含完整重构与打包过程
+  <Card title="基础课设 · GenshinRPG" icon="seti:java" href="/ke-she/01-基础课设-genshinrpg/基础课设项目/">
+    Java Swing + MySQL 架构的角色扮演游戏（RPG）。包含从数据库初始化、核心业务逻辑开发，到基于 AI 进行大规模代码结构重构与分析、多平台独立运行包打包装配的完整工程实践路径。
   </Card>
-  <Card title="代码学习工具 · Supplement" icon="seti:rust" href="/ke-she/02-代码学习工具-Supplement/代码学习工具项目/">
-    基于逆向拆解学习法的刷题工具，适配手机/平板
+  <Card title="代码学习工具 · Supplement" icon="seti:rust" href="/ke-she/02-代码学习工具-supplement/代码学习工具项目/">
+    基于逆向拆解学习理念的代码刷题与辅助工具。专为移动端（手机与平板）适配优化，支持自动获取和同步 Gradle 配置，集成多轮 Bug 修复日志与系统状态栏遮挡等常见移动端 UI 兼容性适配问题的解决方案。
   </Card>
   <Card title="课设展示网站" icon="seti:astro" href="/ke-she/03-课设展示网站/课设展示网站项目/">
-    你正在看的这个展示站，基于 Astro + Starlight 搭建并部署
+    用于集中展示和归档课设作品集的文档展示网站。基于高性能 Astro 静态站点引擎与 Starlight 文档主题进行深度定制开发与优化，打通 Cloudflare Pages 自动化编译与持续集成托管发布全路径。
   </Card>
-  <Card title="格式 Skill 制作" icon="seti:document" href="/ke-she/04-格式Skill制作/格式skill制作/">
-    自动把课设草稿与日志转成规范 Word 报告的 AI 工具
+  <Card title="格式 Skill 制作" icon="seti:document" href="/ke-she/04-格式skill制作/格式skill制作/">
+    通过大语言模型自动生成符合学术与工程规范 Word 报告的格式化 AI 工具。内置基于 Node 与 Puppeteer 的代码美化截图工具，支持在 Windows 机器上实现一键化排版、公式图表生成及 PDF 导出校验。
   </Card>
 </CardGrid>
 
 ## 关于这个站
 
-这里记录了我用 **AI 辅助**完成的几个课程设计项目 —— 从 Java 桌面游戏、跨平台代码学习工具，到这个展示站本身，再到自动生成报告格式的 Skill。
+这里记录了利用 **AI 辅助**完成的几个典型课程设计项目 —— 从 Java 桌面游戏、跨平台代码学习工具，到这个展示站本身，再到自动生成报告格式的 Skill 工具。
 
-每个项目都附有完整的**重构计划、提示词与工作日志**，既是成果展示，也是复盘与留档。
+每个项目均附有完整的**重构计划、大模型提示词与详细工作日志**，实现了软件生命周期中从需求到发布的精细复盘与留档。
 
 > 站点使用 [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) 构建，托管于 [Cloudflare Pages](https://pages.cloudflare.com)。
+
