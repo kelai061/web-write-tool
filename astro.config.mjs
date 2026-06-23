@@ -46,11 +46,11 @@ export default defineConfig({
           autogenerate: { directory: 'ke-she/00-总览' },
         },
         {
-          label: '01 - 基础课设 (GenshinRPG)',
+          label: '01 - 游戏重构',
           autogenerate: { directory: 'ke-she/01-基础课设-GenshinRPG' },
         },
         {
-          label: '02 - 代码学习工具 (Supplement)',
+          label: '02 - 刷题工具',
           autogenerate: { directory: 'ke-she/02-代码学习工具-Supplement' },
         },
         {
@@ -58,7 +58,7 @@ export default defineConfig({
           autogenerate: { directory: 'ke-she/03-课设展示网站' },
         },
         {
-          label: '04 - 格式 Skill 制作',
+          label: '04 - 报告生成',
           autogenerate: { directory: 'ke-she/04-格式Skill制作' },
         },
       ],
