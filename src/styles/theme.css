@@ -1,0 +1,39 @@
+/* ============================================================
+   可莉红色主题 —— Starlight 变量覆盖
+   说明：--sl-color-* 是 Starlight 的设计令牌，覆盖即生效
+   ============================================================ */
+
+/* ---------- 浅色主题（白天）---------- */
+:root,
+:root[data-theme='light'] {
+  /* 主强调色：替换原来的紫色 */
+  --sl-color-bg-nav: #fef2f2;          /* 顶栏背景，淡红 */
+  --sl-color-accent: #dc2626;          /* ★ 主色：链接/按钮/激活 */
+  --sl-color-accent-low: #fecaca;      /* 主色淡变体 */
+  --sl-color-accent-high: #b91c1c;     /* 主色深，hover */
+  --sl-color-text-accent: #b91c1c;     /* 链接文字色 */
+
+  /* 侧边栏激活态、目录高亮会自动跟随 --sl-color-accent */
+  --sl-color-border-accent: #dc2626;
+}
+
+/* ---------- 深色主题（夜间）---------- */
+:root[data-theme='dark'] {
+  --sl-color-bg-nav: #2a0e0e;          /* 暗红顶栏 */
+  --sl-color-accent: #f87171;          /* 暗色下主色亮一点，否则太闷 */
+  --sl-color-accent-low: #7f1d1d;
+  --sl-color-accent-high: #ef4444;
+  --sl-color-text-accent: #fca5a5;
+}
+
+/* ---------- 首页 Hero 按钮也跟随主色 ---------- */
+/* Starlight 的 primary 按钮用的是 --sl-color-bg-primary */
+:root {
+  --sl-color-bg-primary: #dc2626;      /* 主按钮红底 */
+  --sl-color-bg-primary-hover: #b91c1c;
+  --sl-color-white: #ffffff;
+}
+
+/* ---------- 微调：链接 hover 下划线、卡片悬浮 ---------- */
+a:hover { color: var(--sl-color-accent-high); }
+.card:hover { border-color: var(--sl-color-accent); }
