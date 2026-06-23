@@ -31,7 +31,11 @@
 :root {
   --sl-color-bg-primary: #dc2626;      /* 主按钮红底 */
   --sl-color-bg-primary-hover: #b91c1c;
-  --sl-color-white: #ffffff;
+}
+
+/* 确保主按钮文字在浅色/深色主题下均为白色 */
+.sl-link-button.primary {
+  color: #ffffff !important;
 }
 
 /* ---------- 微调：链接 hover 下划线、卡片悬浮 ---------- */
